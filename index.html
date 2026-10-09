@@ -105,61 +105,430 @@
       padding: 0 0.5rem;
     }
 
-    .tickets {
-      background-color: #FF9A56;
-      padding: 1rem;
+    .nav {
+      padding: 0.25rem 0;
     }
 
-    .coming-soon {
-      background-color: #56bbff;
+    .nav a {
+      display: inline-block;
+      text-decoration: none;
+      line-height: 1;
+      font-weight: bold;
+    }
+
+    .nav a+a {
+      margin-left: 0.5rem;
+    }
+
+    .nav a:visited {
+      color: blue;
+    }
+
+    .nav__submit-talk {
+      color: white;
+      background-color: purple;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    .nav .nav__submit-talk:visited {
+      color: white;
+    }
+
+    .event {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+
+    .event__link img {
+      height: auto;
+    }
+
+    .event__info ul {
+      padding: 0;
+    }
+
+    .event__info li {
+      list-style: none;
+    }
+
+    @media (min-width: 40rem) {
+      .event {
+        flex-direction: row;
+      }
+
+      .event__link {
+        flex: 0 1 30rem;
+      }
+
+      .event__info {
+        padding-left: 1rem;
+        flex: 1 1 30rem;
+      }
     }
   </style>
 </head>
 
 <body>
   <main id="root">
-    <h1>Brooklyn Web Workers is a monthly tech meetup and variety show.</h1>
-    <header class="tickets">
-      <h2>September 28 - <a href="https://pools.events/event/pYNobIW4/brooklyn-web-workers-september-2026">Get
-          tickets</a>
-      </h2>
-      <p><a href="http://easyloverbk.com/">Easy Lover</a> - 790 Metropolitan Ave, Brooklyn NY</p>
+    <header>
+      <h1>Brooklyn Web Workers</h1>
+      <p>tech, labor, live music • last Mondays at <a href="https://easyloverbk.com/">Easy Lover</a></p>
+      <nav class="nav">
+        <a class="nav__submit-talk"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdlomclkAKFsahtdGZZi2SvPuw7gV4wgA00rNDUrps8opsHTg/viewform?usp=dialog">Submit
+          a talk</a>
+        <a href="https://bsky.app/profile/brooklynwebworkers.com">Bluesky</a>
+        <a href="https://buttondown.com/brooklynwebworkers">Mailing list</a>
+        <a href="#about">About</a>
+      </nav>
     </header>
-    <p>Follow us on <a href="https://bsky.app/profile/brooklynwebworkers.com">Bluesky</a> or subscribe to our <a
-        href="https://buttondown.com/brooklynwebworkers">mailing list</a> for updates.</p>
-    <p><a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdlomclkAKFsahtdGZZi2SvPuw7gV4wgA00rNDUrps8opsHTg/viewform?usp=dialog">Submit
-        a talk</a> to present at Brooklyn Web Workers.</p>
-    <h2>About</h2>
-    <ul>
-      <li>Brooklyn Web Workers is organized and hosted by <a href="https://bsky.app/profile/justinfalcone.com">Justin
-          Falcone</a>. Previously, Justin was a co-organizer of <a href="http://brooklynjs.com/">BrooklynJS</a> and <a
-          href="http://writetospeak.club/">Write to Speak</a>.</li>
-      <li>Events are last Monday of the month at Easy Lover, starting August 2025.</li>
-      <li>The format of the show is 3x 10 minute lighting talks and 1x 20 minute “headliner”, with musical interludes in
-        between.</li>
-      <li>The event is geared towards people who write code for a living, but is not targeted at any particular tech
-        stack. Our community is not defined by what language or frameworks we use, but by our shared experience working
-        in the tech industry and living in New York. The technical content of the talks should be understandable to a
-        broad software engineering audience, like the talks at <a href="https://bangbangcon.com/">!!Con</a> or <a
-          href="https://www.deconstructconf.com/2019">Deconstruct</a>.</li>
-      <li>The tech industry is deeply enmeshed in the social and political turmoil in the United States — social media,
-        AI, mass surveillance — but other tech events avoid these topics, or engage with them only on a superficial,
-        “apolitical” level. At Brooklyn Web Workers, these topics are discussed explicitly, politically, and frequently.
-      </li>
-      <li>There are no sponsors or sponsees; the event is funded by ticket sales and the organizers. Speakers get a +1,
-        drink tickets and travel expenses. Musical guests are paid.</li>
-    </ul>
-    <h2>Policy</h2>
-    <ul>
-      <li>We do not record our talks, and we ask that you do not record or photograph at Brooklyn Web Workers. Our
-        speakers may be critical of tech companies and the government, and we want to reduce the risk of harassment and
-        reprisal.</li>
-      <li>Brooklyn Web Workers follows the <a href="https://jsconf.com/codeofconduct.html">JSConf Code of Conduct.</a>
-      </li>
-      <li>If you are feeling sick on the day of an event, please stay home! Contact brooklynwebworkers@gmail.com and
-        we’ll refund your ticket.</li>
-    </ul>
+    <h2>Next event - October 26</h2>
+    <section id="october-2026" class="event">
+      <div class="event__link">
+        <img src="assets/october-2026.png" width=1920 height=1080 alt="October 26, 2026" />
+      </div>
+      <div class="event__info">
+        <p>Tickets on sale soon</p>
+      </div>
+    </section>
+    <h2>Past events</h2>
+    <section id="september-2026" class="event">
+      <a href="https://pools.events/event/pYNobIW4/brooklyn-web-workers-september-2026" class="event__link">
+        <img src="assets/september-2026.png" width=1920 height=1080 alt="September 28, 2026" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://www.acrosspolyethylene.com/">Sumanth Srinivasan</a> - "Ephemeral Forest: A post-modern
+            web-based reader for The Mahabharata"
+          </li>
+          <li>
+            <a href="https://mattblanco.me/">Matthew Blanco</a> - "In 26 Slides (or how I learned to stop worrying and
+            love the MTA)"
+          </li>
+          <li>
+            <a href="https://emschwartz.me/">Evan Schwartz</a> on <a href="http://scour.ing/">Scour</a>
+          </li>
+          <li>
+            Music by the <a href="https://landontrust.bandcamp.com/">Landon Trust duo</a> ft. Jeff Lewis
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="august-2026" class="event">
+      <a href="https://pools.events/event/QZru62tO/brooklyn-web-workers-august-2026" class="event__link">
+        <img src="assets/august-2026.png" width=1920 height=1080 loading="lazy" alt="August 31, 2026" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://justinfalcone.com/">Justin Falcone</a> - "Building my TempleOS"
+          </li>
+          <li>
+            <a href="https://grantcuster.com/">Grant Custer</a> on alternative user interfaces
+          </li>
+          <li>
+            <a href="https://jenna.is/">Jenna Zeigen</a> with life lessons from the tech career ladder
+          </li>
+          <li>
+            Music by <a href="https://www.instagram.com/spell.pierce/">Spell Pierce</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="july-2026" class="event">
+      <a href="https://pools.events/event/Gogzju2d/brooklyn-web-workers-july-2026" class="event__link">
+        <img src="assets/july-2026.png" width=1920 height=1080 loading="lazy" alt="July 27, 2026" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://dustmop.io/">Dustin Long</a> - "Works Well With Others"
+          </li>
+          <li>
+            <a href="https://softmoon.world/">Moon Davé</a> on Processing
+          </li>
+          <li>
+            <a href="https://gwenpri.me/">Gwen Pasquarello</a> - "How we run our worker co-op"
+          </li>
+          <li>
+            <a href="https://cwervo.com/">Andrés Cuervo</a> - "Compute Like Water"
+          </li>
+          <li>
+            Music by <a href="https://www.christianandcole.com/">Christian &amp; Cole</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="june-29-2026" class="event">
+      <a href="https://pools.events/event/d3I4F4wo/brooklyn-web-workers-june-29-2026" class="event__link">
+        <img src="assets/june-29-2026.png" width=1920 height=1080 loading="lazy" alt="June 29, 2026" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://connie.surf/">Connie Liu</a> - "values based software: tools and networks"
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/rich-harris.dev">Rich Harris</a> - "Reclaiming AI"
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/bobbby.online">Bobby Grayson</a> - "A Magnetic Media Adventure"
+          </li>
+          <li>
+            Music by <a href="https://meanerpencil.bandcamp.com/">Meaner Pencil</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="june-1-2026" class="event">
+      <a href="https://pools.events/event/Z4lTUfru/brooklyn-web-workers-june-1-2026" class="event__link">
+        <img src="assets/june-1-2026.png" width=1920 height=1080 loading="lazy" alt="June 1, 2026" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://jakelazaroff.com/">Jake Lazaroff</a> on atproto
+          </li>
+          <li>
+            <a href="https://ky.fyi/">Ky Decker</a> on hypertext.tv
+          </li>
+          <li>
+            <a href="https://iafisher.com/">Ian Fisher</a> on systems programming in Python
+          </li>
+          <li>
+            <a href="https://www.goldsam.world/">Samantha Goldstein</a> - "Mind the gap: between the virtual and
+            corporeal realms"
+          </li>
+          <li>
+            Music by Tim Davis
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="april-2026" class="event">
+      <a href="https://pools.events/event/8USOZ0xG/brooklyn-web-workers-april-2026" class="event__link">
+        <img src="assets/april-2026.png" width=1920 height=1080 loading="lazy" alt="April 27, 2026" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://aramzs.xyz/">Aram Zucker-Scharff</a> - "Ad Tech: Broken by Design"
+          </li>
+          <li>
+            <a href="https://hollandblumer.com/">Holland Blumer</a> - "Creative Coding Through a Countercultural Lens"
+          </li>
+          <li>
+            <a href="https://dare.fail/">James Steinberg</a> - "Clowns are eating software and making money"
+          </li>
+          <li>
+            <a href="https://danieltemkin.com/">Daniel Temkin</a> - "Forty-Four Esolangs: The Art of Esoteric Code"
+          </li>
+          <li>
+            Music by <a href="https://www.paulinavo.com/">Paulina Vo</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="march-2026" class="event">
+      <a href="https://pools.events/event/85aZ9Vbh/brooklyn-web-workers-march-2026" class="event__link">
+        <img src="assets/march-2026.png" width=1920 height=1080 loading="lazy" alt="March 30, 2026" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://bdon.org/">Brandon Liu</a> - "Maps as a new web primitive"
+          </li>
+          <li>
+            <a href="https://rose.hall.ly/">Rose Kodsi-Hall</a> - "Markdownlang: Comedy Driven Development"
+          </li>
+          <li>
+            <a href="https://www.jerthorp.me/">Jer Thorp</a> on birding's long and increasingly problematic
+            relationship with AI and big tech
+          </li>
+          <li>
+            Music by the <a href="https://www.codysistersmusic.com/">Cody Sisters</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="january-2026" class="event">
+      <a href="https://pools.events/event/c9YXB6lQ/brooklyn-web-workers-january-2026" class="event__link">
+        <img src="assets/january-2026.png" width=1920 height=1080 loading="lazy" alt="January 26, 2026" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://eieio.games/">Nolen Royalty</a> - "What can we do with text?"
+          </li>
+          <li>
+            <a href="https://www.dangolant.rocks/">Daniel Golant</a> - "12 Factor Apps, 15 Years Later"
+          </li>
+          <li>
+            <a href="https://lifewinning.com/">Ingrid Burrington</a> - "(How) Do Maps Make Money?"
+          </li>
+          <li>
+            Music by <a href="https://skywhitetiger.com/">Sky White Tiger</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="november-2025" class="event">
+      <a href="https://pools.events/event/aCoaJyoP/brooklyn-web-workers-november-2025" class="event__link">
+        <img src="assets/november-2025.png" width=1920 height=1080 loading="lazy" alt="November 24, 2025" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://vcarl.com/">Carl Vitullo</a> - "What do you do after winning the startup lottery?"
+          </li>
+          <li>
+            <a href="https://www.carolynzhang.com/">Kelin Zhang</a> on Poetry Camera
+          </li>
+          <li>
+            <a href="https://henryzoo.com/">Henry Zhu</a> - "Biblerot"
+          </li>
+          <li>
+            Zelda Montes on <a href="https://www.notechforapartheid.com/">No Tech For Apartheid</a>
+          </li>
+          <li>
+            Music by <a href="http://www.elizabethdevlinmusic.com/">Elizabeth Devlin</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="october-2025" class="event">
+      <a href="https://pools.events/event/GGS3brGn/brooklyn-web-workers-october-2025" class="event__link">
+        <img src="assets/october-2025.png" width=1920 height=1080 loading="lazy" alt="October 27, 2025" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://dustinfreeman.org">Dustin Freeman</a> - "Async Work Patterns: Remote Shouldn't Simulate
+            In-Person, And Here's How!"
+          </li>
+          <li>
+            <a href="https://serena.nz/">Serena Chen</a> - "Why Chrome Removed the Lock Icon"
+          </li>
+          <li>
+            <a href="https://aaronson.org/">Adam Aaronson</a> - "Square Theory"
+          </li>
+          <li>
+            <a href="https://afeld.me/">Aidan Feldman</a> - "Civic Tech: or 'Why Can't You Just…'"
+          </li>
+          <li>
+            Music by <a href="https://annabelleadelai.de/">Annabelle Adelaide</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="september-2025" class="event">
+      <a href="https://pools.events/event/dDagl3XE/brooklyn-web-workers-september-2025" class="event__link">
+        <img src="assets/september-2025.png" width=1920 height=1080 loading="lazy" alt="September 29, 2025" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://annabelleadelai.de/">Annabelle Adelaide</a> - "Forth: A Vision of Human/Computing
+            Interaction"
+          </li>
+          <li>
+            <a href="https://eligundry.com/">Eli Gundry</a> - "What's a dollar worth?: A story about knowing where your
+            money comes from"
+          </li>
+          <li>
+            <a href="https://www.victoriakirst.com/">Victoria Kirst</a> - "Tales from a Creative Sabbatical"
+          </li>
+          <li>
+            <a href="https://demarko.org/">Dannel Jurado</a> - "What you get when you finally form a union in tech:
+            Kickstarter United 5 years on"
+          </li>
+          <li>
+            Music by <a href="https://cornmo.com/">Corn Mo</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="august-2025" class="event">
+      <a href="https://pools.events/event/diHfW1hX/brooklyn-web-workers-august-2025" class="event__link">
+        <img src="assets/august-2025.png" width=1920 height=1080 loading="lazy" alt="August 25, 2025" />
+      </a>
+      <div class="event__info">
+        <ul>
+          <li>
+            <a href="https://rachelisaweso.me/">Rachel White</a> - "World Weird Web: exploring lesser known web APIs"
+          </li>
+          <li>
+            <a href="https://jiajiechen.bandcamp.com/">Jia Jie Chen</a> - "Notatio: the harmonics behind building a
+            music card strategy game"
+          </li>
+          <li>
+            <a href="https://bugsrock.online/">Jenn Schiffer</a> - "Hard Wax, Soft Skills"
+          </li>
+          <li>
+            <a href="https://www.hamiltonnolan.com/">Hamilton Nolan</a> - "The Labor Movement Can't Win Without Tech
+            Workers"
+          </li>
+          <li>
+            Music by <a href="https://mani.io/">Mani Nilchiani</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer id="about">
+      <h2>About</h2>
+      <ul>
+        <li>Brooklyn Web Workers is organized and hosted by <a href="https://bsky.app/profile/justinfalcone.com">Justin
+            Falcone</a>. Previously, Justin was a co-organizer of <a href="http://brooklynjs.com/">BrooklynJS</a> and <a
+            href="http://writetospeak.club/">Write to Speak</a>.</li>
+        <li>Events are last Monday of the month at Easy Lover, starting August 2025.</li>
+        <li>The format of the show is 3x 10 minute lighting talks and 1x 20 minute “headliner”, with musical interludes
+          in
+          between.</li>
+        <li>The event is geared towards people who write code for a living, but is not targeted at any particular tech
+          stack. Our community is not defined by what language or frameworks we use, but by our shared experience
+          working
+          in the tech industry and living in New York. The technical content of the talks should be understandable to a
+          broad software engineering audience, like the talks at <a href="https://bangbangcon.com/">!!Con</a> or <a
+            href="https://www.deconstructconf.com/2019">Deconstruct</a>.</li>
+        <li>The tech industry is deeply enmeshed in the social and political turmoil in the United States — social
+          media,
+          AI, mass surveillance — but other tech events avoid these topics, or engage with them only on a superficial,
+          “apolitical” level. At Brooklyn Web Workers, these topics are discussed explicitly, politically, and
+          frequently.
+        </li>
+        <li>There are no sponsors; the event is funded by ticket sales and the organizers. Speakers get a
+          +1,
+          drink tickets and travel expenses. Musical guests are paid.</li>
+      </ul>
+      <h2>Policy</h2>
+      <ul>
+        <li>We do not record our talks, and we ask that you do not record or photograph at Brooklyn Web Workers. Our
+          speakers may be critical of tech companies and the government, and we want to reduce the risk of harassment
+          and
+          reprisal.</li>
+        <li>Brooklyn Web Workers follows the <a href="https://jsconf.com/codeofconduct.html">JSConf Code of Conduct.</a>
+        </li>
+        <li>If you are feeling sick on the day of an event, please stay home! Contact brooklynwebworkers@gmail.com and
+          we’ll refund your ticket.</li>
+      </ul>
+    </footer>
   </main>
 </body>
 
